@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  node:
+    build:
+      context: ./docker
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - .:/frontend
+    ports: 
+      - "5173:80"
+volumes:
+  node:
